@@ -39,4 +39,4 @@ import { UnauthenticatedContentModule } from './unauthenticated-content';
 })
 export class AppModule {}
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+// platformBrowserDynamic().bootstrapModule(AppModule);

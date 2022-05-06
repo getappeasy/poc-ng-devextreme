@@ -11,8 +11,14 @@ import {
   DxFormModule,
 } from 'devextreme-angular';
 import { GlobalComponent } from './pages/global/global.component';
+import { MappingShopComponent } from './pages/mapping-shop/mapping-shop.component';
 
 const routes: Routes = [
+  {
+    path: 'shop',
+    component: MappingShopComponent,
+    canActivate: [AuthGuardService],
+  },
   {
     path: 'global',
     component: GlobalComponent,
@@ -58,6 +64,7 @@ const routes: Routes = [
     ProfileComponent,
     TasksComponent,
     GlobalComponent,
+    MappingShopComponent,
   ],
 })
 export class AppRoutingModule {}

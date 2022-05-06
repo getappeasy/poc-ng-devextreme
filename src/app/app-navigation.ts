@@ -23,4 +23,14 @@ export const navigation = [
     path: '/global',
     icon: 'globe',
   },
+  {
+    text: 'Mapping Data PTTRM',
+    icon: 'columnchooser',
+    items: [
+      {
+        text: 'Mapping Shop',
+        path: '/shop',
+      },
+    ],
+  },
 ];
