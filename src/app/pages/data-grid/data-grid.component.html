@@ -1,4 +1,9 @@
 <h2 class="content-block">Data Grid</h2>
 <div class="content-block">
-    <div class="dx-card responsive-paddings">Put your content here</div>
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="orders"
+    keyExpr="OrderNumber"
+    [showBorders]="true"
+  ></dx-data-grid>
 </div>
