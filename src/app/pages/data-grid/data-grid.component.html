@@ -1,36 +1,38 @@
-<dx-data-grid
-  id="gridContainer"
-  [dataSource]="employees"
-  keyExpr="ID"
-  [allowColumnReordering]="true"
-  [allowColumnResizing]="true"
-  [columnAutoWidth]="false"
-  [showBorders]="true"
->
-  <dxi-column
-    caption="#"
-    [width]="60"
-    alignment="center"
-    dataField="ID"
-  ></dxi-column>
-  <dxi-column
-    caption="POS Shop Code"
-    [width]="200"
-    alignment="center"
-    dataField="POSShopCode"
-  ></dxi-column>
-  <dxi-column
-    caption="POS Shop Name"
-    [width]="400"
-    alignment="lift"
-    dataField="POSShopName"
-  ></dxi-column>
-  <dxi-column
-    caption="POS Shop Code"
-    [width]="200"
-    alignment="lift"
-    dataField="RMShopCode"
-  ></dxi-column>
-</dx-data-grid>
-
-<!-- [columns]="['#', 'POS Shop Code', 'POS Shop Name', 'RM Shop Code']" -->
+<div id="tree-list-demo">
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="employees"
+    keyExpr="ID"
+    [showColumnLines]="true"
+    [showRowLines]="true"
+    [showBorders]="true"
+    [rowAlternationEnabled]="false"
+  >
+    <dxo-editing mode="cell" [allowUpdating]="true"></dxo-editing>
+    <dxi-column
+      caption="#"
+      [width]="60"
+      alignment="center"
+      dataField="ID"
+      [allowEditing]="false"
+    ></dxi-column>
+    <dxi-column
+      caption="POS Shop Code"
+      [width]="200"
+      alignment="center"
+      dataField="POSShopCode"
+      [allowEditing]="false"
+    ></dxi-column>
+    <dxi-column
+      caption="POS Shop Name"
+      alignment="lift"
+      dataField="POSShopName"
+      [allowEditing]="false"
+    ></dxi-column>
+    <dxi-column
+      caption="POS Shop Code"
+      alignment="lift"
+      dataField="RMShopCode"
+    ></dxi-column>
+  </dx-data-grid>
+</div>

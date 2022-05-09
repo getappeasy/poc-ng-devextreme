@@ -19,6 +19,7 @@ import {
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -35,6 +36,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     LoginFormModule,
     UnauthenticatedContentModule,
     DxDataGridModule,
+    CommonModule,
   ],
   providers: [AuthService, ScreenService, AppInfoService],
   bootstrap: [AppComponent],
