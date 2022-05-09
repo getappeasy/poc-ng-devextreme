@@ -1,0 +1,45 @@
+<!-- <div *ngIf="materialGroups$ | async as materialGroups"> -->
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="materialGroups"
+  keyExpr="RecordNo"
+  [allowColumnReordering]="true"
+  [showBorders]="true"
+  [columnAutoWidth]="true"
+>
+  <dxo-export [enabled]="true"></dxo-export>
+  <dxo-editing mode="batch" [allowUpdating]="true"></dxo-editing>
+
+  <dxi-column
+    dataField="RecordNo"
+    caption="#"
+    alignment="center"
+    [width]="100"
+    [allowEditing]="false"
+  ></dxi-column>
+  <dxi-column
+    dataField="Activated"
+    dataType="boolean"
+    alignment="center"
+    [width]="150"
+  ></dxi-column>
+  <dxi-column
+    dataField="ProductGroupRMCode"
+    caption="RM Category"
+    alignment="center"
+    cssClass="headerColumn"
+  ></dxi-column>
+  <dxi-column
+    dataField="ProductGroupRMName"
+    caption="RM Category Name"
+    alignment="left"
+    cssClass="headerColumn"
+  ></dxi-column>
+  <dxi-column dataField="ProductGroupRMID" [groupIndex]="0"></dxi-column>
+
+  <dxo-search-panel [visible]="true"></dxo-search-panel>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-group-panel [visible]="true"></dxo-group-panel>
+  <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+</dx-data-grid>
+<!-- </div> -->

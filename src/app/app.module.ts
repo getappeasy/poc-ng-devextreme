@@ -1,3 +1,4 @@
+import { MaterialGroupService } from './shared/services/material-group.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -9,6 +10,7 @@ import {
   SideNavInnerToolbarModule,
   SingleCardModule,
 } from './layouts';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {
   FooterModule,
   ResetPasswordFormModule,
@@ -34,7 +36,7 @@ import { UnauthenticatedContentModule } from './unauthenticated-content';
     LoginFormModule,
     UnauthenticatedContentModule,
   ],
-  providers: [AuthService, ScreenService, AppInfoService],
+  providers: [AuthService, ScreenService, AppInfoService, MaterialGroupService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

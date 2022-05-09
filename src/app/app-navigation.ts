@@ -19,17 +19,20 @@ export const navigation = [
     ],
   },
   {
-    text: 'Global',
-    path: '/global',
-    icon: 'globe',
-  },
-  {
     text: 'Mapping Data PTTRM',
     icon: 'columnchooser',
     items: [
       {
         text: 'Mapping Shop',
         path: '/shop',
+      },
+      {
+        text: 'Mapping Material Group',
+        path: '/material-group',
+      },
+      {
+        text: 'Mapping Materil Dept',
+        path: '/material-dept',
       },
     ],
   },

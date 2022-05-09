@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginFormComponent } from './shared/components';
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
@@ -9,19 +10,29 @@ import {
   DxBulletModule,
   DxDataGridModule,
   DxFormModule,
+  DxCheckBoxModule,
 } from 'devextreme-angular';
+import { AppData } from '../app/app-data';
 import { GlobalComponent } from './pages/global/global.component';
 import { MappingShopComponent } from './pages/mapping-shop/mapping-shop.component';
+import { MaterialGroupComponent } from './pages/material-group/material-group.component';
+import { MaterialDeptComponent } from './pages/material-dept/material-dept.component';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 const routes: Routes = [
   {
-    path: 'shop',
-    component: MappingShopComponent,
+    path: 'material-group',
+    component: MaterialGroupComponent,
     canActivate: [AuthGuardService],
   },
   {
-    path: 'global',
-    component: GlobalComponent,
+    path: 'material-dept',
+    component: MaterialDeptComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'shop',
+    component: MappingShopComponent,
     canActivate: [AuthGuardService],
   },
   {
@@ -56,6 +67,9 @@ const routes: Routes = [
     DxDataGridModule,
     DxFormModule,
     DxBulletModule,
+    DxCheckBoxModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(AppData, { delay: 1000 }),
   ],
   exports: [RouterModule],
   providers: [AuthGuardService],
@@ -65,6 +79,8 @@ const routes: Routes = [
     TasksComponent,
     GlobalComponent,
     MappingShopComponent,
+    MaterialGroupComponent,
+    MaterialDeptComponent,
   ],
 })
 export class AppRoutingModule {}
