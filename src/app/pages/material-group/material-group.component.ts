@@ -11,15 +11,15 @@ import { exportDataGrid } from 'devextreme/excel_exporter';
 })
 export class MaterialGroupComponent implements OnInit {
   materialGroups!: IRmProductGroup[];
-  materialGroups$!: Observable<IRmProductGroup[]>;
+  // materialGroups$!: Observable<IRmProductGroup[]>;
   constructor(private materialGroupService: MaterialGroupService) {
-    this.materialGroups$ = this.materialGroupService.materialGroups$;
+    // this.materialGroups$ = this.materialGroupService.materialGroups$;
   }
 
   ngOnInit(): void {
     this.materialGroupService.materialGroups$.subscribe((materialGroups) => {
       this.materialGroups = materialGroups;
-      console.log(materialGroups);
+      // console.log(materialGroups);
     });
   }
 }

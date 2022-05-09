@@ -15,8 +15,10 @@ export class MaterialGroupService {
   materialGroups$ = this.http
     .get<IRespRmProductGroup>(this.materialGroupUrl)
     .pipe(
-      tap((data) => console.log('Material Groups: ', JSON.stringify(data))),
-      map((data) => data.ResponseObj),
+      tap((rmGruop) =>
+        console.log('Material Groups: ', JSON.stringify(rmGruop))
+      ),
+      map((rmGruop) => rmGruop.ResponseObj),
       catchError(this.handleError)
     );
 
