@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DxButtonModule } from 'devextreme-angular';
+import { DxButtonModule, DxDataGridModule } from 'devextreme-angular';
 import {
   SideNavOuterToolbarModule,
   SideNavInnerToolbarModule,
@@ -18,6 +18,7 @@ import {
 } from './shared/components';
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -33,8 +34,11 @@ import { UnauthenticatedContentModule } from './unauthenticated-content';
     ChangePasswordFormModule,
     LoginFormModule,
     UnauthenticatedContentModule,
+    DxDataGridModule,
   ],
   providers: [AuthService, ScreenService, AppInfoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);

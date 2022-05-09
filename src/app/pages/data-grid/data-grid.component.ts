@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { DxDataGridModule } from 'devextreme-angular';
-import { Order, Service } from 'src/app/shared/services/app-service';
+import { Employee, Service } from 'src/app/shared/services/app-service';
 
 @Component({
   selector: 'app-data-grid',
@@ -12,9 +12,9 @@ import { Order, Service } from 'src/app/shared/services/app-service';
   providers: [Service],
 })
 export class DataGridComponent {
-  orders: Order[];
+  employees: Employee[];
 
   constructor(service: Service) {
-    this.orders = service.getOrders();
+    this.employees = service.getEmployees();
   }
 }

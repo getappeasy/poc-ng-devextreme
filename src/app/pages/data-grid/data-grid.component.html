@@ -1,9 +1,36 @@
-<h2 class="content-block">Data Grid</h2>
-<div class="content-block">
-  <dx-data-grid
-    id="gridContainer"
-    [dataSource]="orders"
-    keyExpr="OrderNumber"
-    [showBorders]="true"
-  ></dx-data-grid>
-</div>
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="employees"
+  keyExpr="ID"
+  [allowColumnReordering]="true"
+  [allowColumnResizing]="true"
+  [columnAutoWidth]="false"
+  [showBorders]="true"
+>
+  <dxi-column
+    caption="#"
+    [width]="60"
+    alignment="center"
+    dataField="ID"
+  ></dxi-column>
+  <dxi-column
+    caption="POS Shop Code"
+    [width]="200"
+    alignment="center"
+    dataField="POSShopCode"
+  ></dxi-column>
+  <dxi-column
+    caption="POS Shop Name"
+    [width]="400"
+    alignment="lift"
+    dataField="POSShopName"
+  ></dxi-column>
+  <dxi-column
+    caption="POS Shop Code"
+    [width]="200"
+    alignment="lift"
+    dataField="RMShopCode"
+  ></dxi-column>
+</dx-data-grid>
+
+<!-- [columns]="['#', 'POS Shop Code', 'POS Shop Name', 'RM Shop Code']" -->
