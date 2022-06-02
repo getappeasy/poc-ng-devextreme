@@ -11,6 +11,9 @@ import {
   DxDataGridModule,
   DxFormModule,
   DxCheckBoxModule,
+  DxSelectBoxModule,
+  DxRadioGroupModule,
+  DxButtonModule,
 } from 'devextreme-angular';
 import { AppData } from '../app/app-data';
 import { GlobalComponent } from './pages/global/global.component';
@@ -68,6 +71,9 @@ const routes: Routes = [
     DxFormModule,
     DxBulletModule,
     DxCheckBoxModule,
+    DxSelectBoxModule,
+    DxRadioGroupModule,
+    DxButtonModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(AppData, { delay: 1000 }),
   ],

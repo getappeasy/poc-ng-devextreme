@@ -1,1 +1,76 @@
-<p>material-dept works!</p>
+<div class="head-options">
+  <div class="flex-box options-g-1">
+    <dx-select-box
+      width="50%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+    <dx-select-box
+      width="50%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+  </div>
+  <div class="flex-box options-g-2">
+    <dx-select-box
+      width="100%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+  </div>
+  <div class="flex-box options-g-3">
+    <dx-radio-group [items]="priorities" [value]="priorities[1]">
+    </dx-radio-group>
+  </div>
+  <div class="flex-box options-g-4">
+    <dx-radio-group
+      [dataSource]="optionsSelect"
+      valueExpr="id"
+      displayExpr="description"
+      [value]="optionsSelect[0].id"
+    >
+    </dx-radio-group>
+  </div>
+  <div class="flex-box options-g-5">
+    <dx-select-box
+      width="50%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+    <dx-select-box
+      width="50%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+  </div>
+  <div class="flex-box options-g-6">
+    <dx-radio-group
+      [items]="priorities02"
+      [value]="priorities02[0]"
+      layout="horizontal"
+    >
+    </dx-radio-group>
+  </div>
+  <div class="flex-box options-g-7">
+    <dx-select-box
+      width="25%"
+      [items]="languages"
+      [value]="languages[1]"
+    ></dx-select-box>
+  </div>
+  <div class="flex-box options-g-8">
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+    <p>To</p>
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+    <dx-select-box [items]="languages" [value]="languages[1]"></dx-select-box>
+  </div>
+  <div class="flex-box options-g-9">
+    <dx-button stylingMode="contained" text="Generate Report" type="default">
+    </dx-button>
+    <dx-check-box [value]="true"></dx-check-box>
+    <span>Display Graph For Monthly Report And Date Range Report</span>
+  </div>
+</div>
