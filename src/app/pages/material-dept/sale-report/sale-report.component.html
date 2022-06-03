@@ -1,0 +1,21 @@
+<dx-chart id="chart" [dataSource]="mocData" [stickyHovering]="false">
+  <dxo-title
+    text="Sale Report Of 0005:Cafe Amazon China (CNY) (30 เมษายน 2559 - 30 เมษายน 2565"
+  >
+  </dxo-title>
+  <dxi-series valueField="TotalSale" name="Sale"></dxi-series>
+
+  <dxo-common-series-settings
+    argumentField="Date"
+    type="spline"
+    hoverMode="includePoints"
+  >
+    <dxo-point hoverMode="allArgumentPoints"></dxo-point>
+  </dxo-common-series-settings>
+  <dxo-legend
+    verticalAlignment="bottom"
+    horizontalAlignment="center"
+    hoverMode="excludePoints"
+  >
+  </dxo-legend>
+</dx-chart>

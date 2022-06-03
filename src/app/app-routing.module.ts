@@ -14,6 +14,7 @@ import {
   DxSelectBoxModule,
   DxRadioGroupModule,
   DxButtonModule,
+  DxChartModule,
 } from 'devextreme-angular';
 import { AppData } from '../app/app-data';
 import { GlobalComponent } from './pages/global/global.component';
@@ -21,6 +22,7 @@ import { MappingShopComponent } from './pages/mapping-shop/mapping-shop.componen
 import { MaterialGroupComponent } from './pages/material-group/material-group.component';
 import { MaterialDeptComponent } from './pages/material-dept/material-dept.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { SaleReportComponent } from './pages/material-dept/sale-report/sale-report.component';
 
 const routes: Routes = [
   {
@@ -74,6 +76,7 @@ const routes: Routes = [
     DxSelectBoxModule,
     DxRadioGroupModule,
     DxButtonModule,
+    DxChartModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(AppData, { delay: 1000 }),
   ],
@@ -87,6 +90,7 @@ const routes: Routes = [
     MappingShopComponent,
     MaterialGroupComponent,
     MaterialDeptComponent,
+    SaleReportComponent,
   ],
 })
 export class AppRoutingModule {}
